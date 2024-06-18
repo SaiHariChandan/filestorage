@@ -6,11 +6,11 @@
       "use": "@vercel/python"
     },
     {
-      "src": "static/**/*",
+      "src": "app/static/**/*",
       "use": "@vercel/static"
     },
     {
-      "src": "templates/**/*",
+      "src": "app/templates/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -21,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/templates/index.html"
+      "dest": "/app/templates/index.html"
     }
   ]
 }
