@@ -6,11 +6,11 @@
       "use": "@vercel/python"
     },
     {
-      "src": "app/static/**/*",
+      "src": "static/**/*",
       "use": "@vercel/static"
     },
     {
-      "src": "app/templates/**/*",
+      "src": "templates/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -23,5 +23,13 @@
       "src": "/(.*)",
       "dest": "/app/templates/index.html"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "PYTHONUNBUFFERED": "1",
+      "PIP_NO_CACHE_DIR": "off",
+      "PIP_DISABLE_PIP_VERSION_CHECK": "on",
+      "PIP_DEFAULT_TIMEOUT": "100"
+    }
+  }
 }
